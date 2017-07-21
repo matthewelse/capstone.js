@@ -598,4 +598,4 @@ var cs;
             throw error;
         }
     };
-})(cs || (cs = {}));
+})(cs = exports.cs || (exports.cs = {}));
