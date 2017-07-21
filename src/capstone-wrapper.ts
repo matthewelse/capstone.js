@@ -3,6 +3,7 @@
  * Wrapper made by Alexandro Sanchez Bach.
  */
 import {CapstoneConstant} from './capstone-constants';
+import {MCapstone} from './libcapstone.out';
 
 type EnvironmentType = "WEB" | "NODE" | "SHELL" | "WORKER";
 

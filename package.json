@@ -21,6 +21,6 @@
   "bugs": {
     "url": "https://github.com/AlexAltea/capstone.js/issues"
   },
-  "main": "src/capstone-wrapper.js",
-  "typings": "src/capstone-wrapper.d.ts"
+  "main": "dist/capstone-wrapper.js",
+  "typings": "dist/capstone-wrapper.d.ts"
 }

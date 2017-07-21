@@ -69,7 +69,7 @@ def compileCapstone(targets):
 
     # CMake
     cmd = 'cmake'
-    cmd += os.path.expandvars(' -DCMAKE_TOOLCHAIN_FILE=$EMSCRIPTEN/cmake/Modules/Platform/Emscripten.cmake')
+    cmd += os.path.expandvars(' -DCMAKE_TOOLCHAIN_FILE="C:/Program Files/Emscripten/emscripten/1.35.0/cmake/Modules/Platform/Emscripten.cmake"')
     cmd += ' -DCMAKE_BUILD_TYPE=Release'
     cmd += ' -DCMAKE_C_FLAGS=\"-Wno-warn-absolute-paths\"'
     cmd += ' -DCAPSTONE_BUILD_TESTS=OFF'
@@ -95,8 +95,8 @@ def compileCapstone(targets):
     os.chdir('..')
 
     # Compile static library to JavaScript
-    cmd = os.path.expandvars('$EMSCRIPTEN/emcc')
-    cmd += ' -Os --memory-init-file 0'
+    cmd = os.path.expandvars('emcc')
+    cmd += ' -Oz --memory-init-file 0'
     cmd += ' capstone/libcapstone.a'
     cmd += ' -s EXPORTED_FUNCTIONS=\"[\''+ '\', \''.join(EXPORTED_FUNCTIONS) +'\']\"'
     cmd += ' -s MODULARIZE=1'
